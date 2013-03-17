@@ -1,10 +1,14 @@
 require 'spec_helper'
 
 feature 'Creating Parameters' do
+
+  before do
+    visit '/'
+    click_link 'New Parameter'
+  end
+
 	scenario "can create a parameter" do
-		visit '/'
-		
-		click_link 'New Parameter'
+
 		fill_in 'Name', :with => 'Calcium'
 		fill_in 'Units', :with => 'ppm'
 		fill_in 'High Ocean Level', :with => ''
@@ -27,8 +31,15 @@ feature 'Creating Parameters' do
     title="Calcium - Parameters - AqManager"
     expect(find("title").native.text).to have_content(title)
 
+  end
 
-	end
+  scenario 'Can not create a parameter without a name' do
+
+    click_button 'Create Parameter'
+
+    expect(page).to have_content("Parameter has not been created.")
+    expect(page).to have_content("Name cannot be blank.")
+  end
 end
 		
 		

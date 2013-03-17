@@ -15,7 +15,7 @@ class ParametersController < ApplicationController
       flash[:notice]="Parameter has been created."
       redirect_to @parameter
     else
-      # nothing yet
+      flash[:alert]="Parameter has not been created"
     end
   end 
   
