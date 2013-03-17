@@ -14,9 +14,20 @@ feature 'Creating Parameters' do
 		fill_in 'Optimum Tank Level', :with => ''
 		fill_in 'Minimum Tank Level', :with =>'390'
 
+    save_and_open_page
+
 		click_button 'Create Parameter'
-		
+
+
 		expect(page).to have_content('Parameter has been created.')
+    parameter=Parameter.where(name: "Calcium").first
+
+    expect(page.current_url).to eql(parameter_url(parameter))
+
+    title="Calcium - Parameters - AqManager"
+    expect(find("title").native.text).to have_content(title)
+
+
 	end
 end
 		
