@@ -7,14 +7,13 @@ feature 'Creating Parameters' do
 		click_link 'New Parameter'
 		fill_in 'Name', :with => 'Calcium'
 		fill_in 'Units', :with => 'ppm'
-		#fill_in 'Ocean_High', :with => ''
-		fill_in 'Ocean norm', :with => '420'
-		save_and_open_page
-		fill_in 'Ocean_low', :with => ''
-		fill_in 'Tank_high', :with => '450'
-		fill_in 'Tank_optimum', :with => ''
-		fill_in 'Tank_low', :with =>'390'
-		save_and_open_page
+		fill_in 'High Ocean Level', :with => ''
+		fill_in 'Normal Ocean Level', :with => '420'
+		fill_in 'Low Ocean Level', :with => ''
+		fill_in 'Maximum Tank Level', :with => '450'
+		fill_in 'Optimum Tank Level', :with => ''
+		fill_in 'Minimum Tank Level', :with =>'390'
+
 		click_button 'Create Parameter'
 		
 		expect(page).to have_content('Parameter has been created.')

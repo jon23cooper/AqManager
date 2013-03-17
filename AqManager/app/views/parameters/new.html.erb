@@ -1,4 +1,4 @@
-<h2>New Parameter</h2>h2>
+<h2>New Parameter</h2>
 
 <%= form_for(@parameter) do |f| %>
 	<p>
@@ -12,8 +12,33 @@
 	</p>
 	
 	<p>
-		<%= f.label :ocean_norm, "Normal Ocean Levels:" %><br />
+		<%= f.label :ocean_max, "High Ocean Level:" %><br />
+		<%= f.text_field :ocean_max %>
+	</p>
+		
+	<p>
+		<%= f.label :ocean_norm, "Normal Ocean Level:" %><br />
 		<%= f.text_field :ocean_norm %>
+	</p>
+	
+	<p>
+		<%= f.label :ocean_min, "Low Ocean Level:" %><br />
+		<%= f.text_field :ocean_min %>
+	</p>
+	
+	<p>
+		<%= f.label :tank_max, "Maximum Tank Level:" %><br />
+		<%= f.text_field :tank_max %>
+	</p>
+	
+	<p>
+		<%= f.label :tank_optimum, "Optimum Tank Level:" %><br />
+		<%= f.text_field :tank_optimum %>
+	</p>
+	
+		<p>
+		<%= f.label :tank_min, "Minimum Tank Level:" %><br />
+		<%= f.text_field :tank_min %>
 	</p>
 	
 	<%= f.submit %>

@@ -1,11 +1,31 @@
 class ParametersController < ApplicationController
 
-	def index
+  def index
+
+  end
+
+  def new
+  	@parameter=Parameter.new
+  end
 	
-	end
+  def create
+    @parameter=Parameter.new(parameter_params)
+  
+    if @parameter.save
+      flash[:notice]="Parameter has been created."
+      redirect_to @parameter
+    else
+      # nothing yet
+    end
+  end 
+  
+  def show
+    @parameter=Parameter.find(params[:id])
+  end
 	
-	def new
-		@parameter=Parameter.new
-	end
+  private 
+    def parameter_params
+      params.require(:parameter).permit(:name, :units, :ocean_max, :ocean_norm, :ocean_min, :tank_max, :tank_optimum, :tank_min)
+    end
 
 end
