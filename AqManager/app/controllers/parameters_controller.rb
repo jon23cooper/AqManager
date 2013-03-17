@@ -5,7 +5,7 @@ class ParametersController < ApplicationController
 	end
 	
 	def new
-	
+		@parameter=Parameter.new
 	end
 
 end

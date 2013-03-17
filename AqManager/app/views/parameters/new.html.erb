@@ -1,0 +1,20 @@
+<h2>New Parameter</h2>h2>
+
+<%= form_for(@parameter) do |f| %>
+	<p>
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</p>
+	
+	<p>
+		<%= f.label :units %><br />
+		<%= f.text_field :units %>
+	</p>
+	
+	<p>
+		<%= f.label :ocean_norm, "Normal Ocean Levels:" %><br />
+		<%= f.text_field :ocean_norm %>
+	</p>
+	
+	<%= f.submit %>
+<% end %>
