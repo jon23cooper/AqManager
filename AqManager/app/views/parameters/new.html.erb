@@ -42,4 +42,17 @@
 	</p>
 	
 	<%= f.submit %>
+    <% if @parameter.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@parameter.errors.count, "error") %>
+           prohibited this foo from being saved:</h2>
+
+          <ul>
+            <% @parameter.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+
+        </div>
+    <% end %>
 <% end %>

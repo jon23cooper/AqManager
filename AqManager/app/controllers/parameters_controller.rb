@@ -1,7 +1,7 @@
 class ParametersController < ApplicationController
 
   def index
-
+    @parameters=Parameter.all
   end
 
   def new
@@ -10,12 +10,13 @@ class ParametersController < ApplicationController
 	
   def create
     @parameter=Parameter.new(parameter_params)
-  
+    @parameter.save
     if @parameter.save
       flash[:notice]="Parameter has been created."
       redirect_to @parameter
     else
-      flash[:alert]="Parameter has not been created"
+      flash[:alert]="Parameter has not been created."
+      render :action => "new"
     end
   end 
   

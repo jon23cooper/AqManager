@@ -23,6 +23,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.0.0.beta1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord-deprecated_finders (v0.0.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.0.0.beta1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.0.beta2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.0.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
@@ -35,11 +36,14 @@
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.2.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.2.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.4.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.4, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.0.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.2.1, RVM: ruby-2.0.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="launchy (v2.2.0, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.3, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.21, RVM: ruby-2.0.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v4.6.2, RVM: ruby-2.0.0-p0) [gem]" level="application" />
