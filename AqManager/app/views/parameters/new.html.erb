@@ -1,47 +1,6 @@
 <h2>New Parameter</h2>
+    <%= render 'form' %>
 
-<%= form_for(@parameter) do |f| %>
-	<p>
-		<%= f.label :name %><br />
-		<%= f.text_field :name %>
-	</p>
-	
-	<p>
-		<%= f.label :units %><br />
-		<%= f.text_field :units %>
-	</p>
-	
-	<p>
-		<%= f.label :ocean_max, "High Ocean Level:" %><br />
-		<%= f.text_field :ocean_max %>
-	</p>
-		
-	<p>
-		<%= f.label :ocean_norm, "Normal Ocean Level:" %><br />
-		<%= f.text_field :ocean_norm %>
-	</p>
-	
-	<p>
-		<%= f.label :ocean_min, "Low Ocean Level:" %><br />
-		<%= f.text_field :ocean_min %>
-	</p>
-	
-	<p>
-		<%= f.label :tank_max, "Maximum Tank Level:" %><br />
-		<%= f.text_field :tank_max %>
-	</p>
-	
-	<p>
-		<%= f.label :tank_optimum, "Optimum Tank Level:" %><br />
-		<%= f.text_field :tank_optimum %>
-	</p>
-	
-		<p>
-		<%= f.label :tank_min, "Minimum Tank Level:" %><br />
-		<%= f.text_field :tank_min %>
-	</p>
-	
-	<%= f.submit %>
     <% if @parameter.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@parameter.errors.count, "error") %>
@@ -55,4 +14,4 @@
 
         </div>
     <% end %>
-<% end %>
+

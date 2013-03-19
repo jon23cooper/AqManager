@@ -23,6 +23,21 @@ class ParametersController < ApplicationController
   def show
     @parameter=Parameter.find(params[:id])
   end
+
+  def edit
+    @parameter = Parameter.find(params[:id])
+  end
+
+  def update
+    @parameter=Parameter.find(params[:id])
+    if @parameter.update_attributes(parameter_params)
+      flash[:notice] = 'Parameter has been updated.'
+      redirect_to @parameter
+    else
+      flash[:alert] = 'Parameter has not been updated.'
+      render :action => 'edit'
+    end
+  end
 	
   private 
     def parameter_params

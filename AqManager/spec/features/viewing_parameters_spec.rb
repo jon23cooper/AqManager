@@ -9,5 +9,6 @@ feature 'Viewing Parameters' do
     visit '/'
     click_link 'calcium'
     page.current_url.should == parameter_url(parameter)
+    save_and_open_page
   end
 end
