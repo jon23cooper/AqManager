@@ -38,6 +38,13 @@ class ParametersController < ApplicationController
       render :action => 'edit'
     end
   end
+
+  def destroy
+    @parameter=Parameter.find(params[:id])
+    @parameter.destroy
+    flash[:notice]="Parameter has been deleted."
+    redirect_to parameters_path
+  end
 	
   private 
     def parameter_params
