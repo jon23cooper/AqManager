@@ -1,5 +1,7 @@
 class ParametersController < ApplicationController
 
+  before_filter :find_project, :only => [:show, :edit, :update, :destroy]
+
   def index
     @parameters=Parameter.all
   end
@@ -21,15 +23,15 @@ class ParametersController < ApplicationController
   end 
   
   def show
-    @parameter=Parameter.find(params[:id])
+   # @parameter=Parameter.find(params[:id])
   end
 
   def edit
-    @parameter = Parameter.find(params[:id])
+    #@parameter = Parameter.find(params[:id])
   end
 
   def update
-    @parameter=Parameter.find(params[:id])
+    #@parameter=Parameter.find(params[:id])
     if @parameter.update_attributes(parameter_params)
       flash[:notice] = 'Parameter has been updated.'
       redirect_to @parameter
@@ -40,7 +42,7 @@ class ParametersController < ApplicationController
   end
 
   def destroy
-    @parameter=Parameter.find(params[:id])
+    #@parameter=Parameter.find(params[:id])
     @parameter.destroy
     flash[:notice]="Parameter has been deleted."
     redirect_to parameters_path
@@ -49,6 +51,13 @@ class ParametersController < ApplicationController
   private 
     def parameter_params
       params.require(:parameter).permit(:name, :units, :ocean_max, :ocean_norm, :ocean_min, :tank_max, :tank_optimum, :tank_min)
+    end
+  private
+    def find_project
+      @parameter=Parameter.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:alert] = 'The parameter you were looking for could not be found.'
+      redirect_to parameters_path
     end
 
 end
