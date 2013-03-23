@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130317084531) do
+ActiveRecord::Schema.define(version: 20130319215040) do
 
   create_table "parameters", force: true do |t|
     t.string   "name"
@@ -25,5 +25,16 @@ ActiveRecord::Schema.define(version: 20130317084531) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "testresults", force: true do |t|
+    t.float    "value"
+    t.integer  "testresult_date"
+    t.text     "note"
+    t.integer  "parameter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "testresults", ["parameter_id"], name: "index_testresults_on_parameter_id"
 
 end

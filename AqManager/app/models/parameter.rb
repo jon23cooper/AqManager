@@ -1,4 +1,7 @@
 class Parameter < ActiveRecord::Base
+
+  has_many :testresults
+
   validates :name, :presence => true
   validates :units, :presence => true
   validates :ocean_max, :numericality => true, :allow_nil => true

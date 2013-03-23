@@ -3,3 +3,13 @@
 <%= link_to 'Edit Parameter', edit_parameter_path(@parameter) %>
 <%= link_to 'Delete Parameter', parameter_path(@parameter),
             :method => :delete, data: {confirm: 'Are you sure you want to delete this parameter?'} %>
+<%= link_to "New Test Result", new_parameter_testresult_path(@parameter) %>
+<ul id='testresults'>
+  <% @parameter.testresults.each do |testresult| %>
+  <li>
+    #<%= testresult.id %>
+    <%= link_to testresult.value, [@parameter, testresult] %>
+
+  </li>
+      <% end %>
+</ul>
